@@ -4496,11 +4496,6 @@ void rrd_graph_options(
             break;
         case 'b':
             im->base = atol(optarg);
-            if (im->base != 1024 && im->base != 1000) {
-                rrd_set_error
-                    ("the only sensible value for base apart from 1000 is 1024");
-                return;
-            }
             break;
         case 'w':
             long_tmp = atol(optarg);
